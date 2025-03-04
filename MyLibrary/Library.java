@@ -30,10 +30,11 @@ class Library {
   }
 
   public void receiveBook(String bookId, String memberId) {
-    Book book = this.getBookById(bookId);
+    Member member = this.getMemberById(memberId);
+    Book book = member.getBookById(bookId);
+
     this.books.add(book);
 
-    Member member = this.getMemberById(memberId);
     int memberIndex = this.getMemberIndex(member);
     this.members.get(memberIndex).borrowedBooks.remove(book);
   }

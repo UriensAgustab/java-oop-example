@@ -126,6 +126,6 @@ class Main {
     System.out.print("id book : ");
     String bookId = scan.next();
 
-    library.receiveBook(memberId, bookId);
+    library.receiveBook(bookId, memberId);
   }
 }
